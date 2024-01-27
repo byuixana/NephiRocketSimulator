@@ -112,12 +112,6 @@ void GenerateRocketReport()
 	cout << "This function will eventually have something in it.";
 }
 
-float Rocket::UpdateMass()
-{
-	float updatedMass = _mass - _payload;
-	return updatedMass;
-}
-
 void Rocket::RocketLanding()
 {
 	cout << "3, 2, 1, landed!";

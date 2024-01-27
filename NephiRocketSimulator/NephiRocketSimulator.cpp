@@ -25,10 +25,10 @@ int main()
     Rocket nephiRocket(549054.0f);
 
     //Launches rocket.
-    //nephiRocket.RocketLaunch();
+    nephiRocket.RocketLaunch();
 
     //Calculates distance traveled in air.
-    //nephiRocket.RocketInAir(965.6);
+    nephiRocket.RocketInAir(965.6);
 
     //Calculates rockets fall.
     nephiRocket.RocketFreeFall(965.6);
