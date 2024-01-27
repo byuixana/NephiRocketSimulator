@@ -2,6 +2,7 @@
 #include "Rocket.h"
 #include "Velocity.h"
 #include <vector>
+#include <thread>
 using namespace std;
 /*Falcon 9 Model:
 
@@ -70,7 +71,7 @@ void Rocket::RocketInAir(float userOrbit) {
 		//Begins calculating velocity.
 	for (distance = 0.0; distance <= userOrbit; distance += kilometersPerSecond)
 	{
-
+		this_thread::sleep_for(chrono::milliseconds(100));
 		//Distance increases over time, the loop ends at the Orbit the user said.
 		float time = distance / kilometersPerSecond;
 		cout << " SS Celestial is " << distance << " kilometers in air, moving at " << currentVelocity << " kilometers per second." << endl;
@@ -98,12 +99,13 @@ void Rocket::RocketFreeFall(float userOrbit)
 	/**/
 	for (distance = userOrbit; distance > 0; distance -= (freefallSpeed.first / freefallSpeed.second))
 	{
-
+		this_thread::sleep_for(chrono::milliseconds(100));
 		//Distance increases over time, the loop ends at the Orbit the user said.
 		float time = distance / currentVelocity;
 		cout << " SS Celestial is " << distance << " kilometers in air, moving at " << currentVelocity << " kilometers per second." << endl;
+		
 	}
-	
+	cout << "The SS Celestial has landed. Great job, space ranger!";
 	
 }
 
