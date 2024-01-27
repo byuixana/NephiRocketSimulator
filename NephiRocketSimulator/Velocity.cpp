@@ -23,7 +23,7 @@ pair<float, float> Velocity::CalculateGandT(float userOrbit)
 	float t = 2.0 * (userOrbit * 1609.34) / 9.8;
 
 	//Calculates the gravitational acceleration.
-	float gAcceleration = (.5 * 9.8) * (t * t);
+	float gAcceleration = sqrt((.5 * 9.8) * (t * t));
 
 	//Puts the values in a pair.
 	pair<float, float> gtPair = { gAcceleration, t };

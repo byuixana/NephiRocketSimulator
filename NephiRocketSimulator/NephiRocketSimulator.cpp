@@ -10,27 +10,28 @@ using namespace std;
 
 int main()
 {
-    float userMass;
+    
+    /*float userMass;
     cout << "Select a weight for a payload: " << endl;
-    cin >> userMass;
+    cin >> userMass;*/
 
     // Add orbit options here.
 
-    float userOrbit;
+    /*float userOrbit;
     cout << "Select an orbit: " << endl;
-    cin >> userOrbit;
+    cin >> userOrbit;*/
 
     //Creates rocket.
-    Rocket nephiRocket(userMass);
+    Rocket nephiRocket(549054.0f);
 
     //Launches rocket.
-    nephiRocket.RocketLaunch();
+    //nephiRocket.RocketLaunch();
 
     //Calculates distance traveled in air.
-    nephiRocket.RocketInAir(userOrbit);
+    //nephiRocket.RocketInAir(965.6);
 
     //Calculates rockets fall.
-    nephiRocket.RocketFreeFall(userOrbit);
+    nephiRocket.RocketFreeFall(965.6);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

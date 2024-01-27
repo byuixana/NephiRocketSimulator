@@ -76,7 +76,7 @@ void Rocket::RocketInAir(float userOrbit) {
 		cout << " SS Celestial is " << distance << " kilometers in air, moving at " << currentVelocity << " kilometers per second." << endl;
 	}
 
-	cout << "The SS Celestial has reached _______! Dropping payload now.";
+	
 }
 
 void Rocket::RocketFreeFall(float userOrbit)
@@ -94,6 +94,17 @@ void Rocket::RocketFreeFall(float userOrbit)
 
 	//Calculates current velocity.
 	float currentVelocity = fallingVelocity.CalculateVelocityFalling(freefallSpeed);
+
+	/**/
+	for (distance = userOrbit; distance > 0; distance -= (freefallSpeed.first / freefallSpeed.second))
+	{
+
+		//Distance increases over time, the loop ends at the Orbit the user said.
+		float time = distance / currentVelocity;
+		cout << " SS Celestial is " << distance << " kilometers in air, moving at " << currentVelocity << " kilometers per second." << endl;
+	}
+	
+	
 }
 
 void GenerateRocketReport()
