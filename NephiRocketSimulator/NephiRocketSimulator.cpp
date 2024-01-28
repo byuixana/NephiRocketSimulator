@@ -10,13 +10,18 @@ using namespace std;
 
 int main()
 {
-    // Add orbit options here.
+    //Orbit options
+    cout << "Orbit options:" << endl;
+    cout << "LEO (Low Earth Orbit)" << endl;
+    cout << "MEO (Medium Earth Orbit)" << endl;
+    cout << "GEO(Geosynchonous Orbit)" << endl;
 
     string userOrbitChoice;
     cout << "Select an orbit: " << endl;
     cin >> userOrbitChoice;
 
     float userOrbit;
+
     if (userOrbitChoice == "LEO")
     {
         userOrbit = 160;
@@ -32,7 +37,7 @@ int main()
     }
 
     //Creates rocket.
-    Rocket* nephiRocket = new Rocket(549054.0);
+    Rocket* nephiRocket = new Rocket(55000.0);
 
     //Launches rocket.
     nephiRocket->RocketLaunch();

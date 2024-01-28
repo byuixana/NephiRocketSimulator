@@ -57,7 +57,7 @@ void Rocket::RocketInAir(float userOrbit) {
 	//Initialize velocity.
 	Velocity velocity;
 
-	pair<float, float> rocketSpeed = { 2.0, 1.0 }; //2 kilometers per second (distance, time)
+	pair<float, float> rocketSpeed = { 2.0, 1.0 }; //2 kilometers per second (distance, time).
 
 	//The average rocket falls at 2 kilometers per second.
 	float kilometersPerSecond = rocketSpeed.first;
@@ -74,15 +74,13 @@ void Rocket::RocketInAir(float userOrbit) {
 		this_thread::sleep_for(chrono::milliseconds(100));
 		//Distance increases over time, the loop ends at the Orbit the user said.
 		float time = distance / kilometersPerSecond;
-		cout << " SS Celestial is " << distance << " kilometers in air, moving at " << currentVelocity << " kilometers per second." << endl;
+		cout << " SS Celestial is " << distance << " kilometers in air, moving at " << currentVelocity << " kilometers per second, with " << time << " seconds passed." << endl;
 	}
-
-	
 }
 
 void Rocket::RocketFreeFall(float userOrbit)
 {
-	cout << "Payload has been dropped. Your rocket is now falling.";
+	cout << "Your rocket is now falling.";
 
 	//Initializes a new velocity. 
 	Velocity fallingVelocity;
@@ -102,20 +100,9 @@ void Rocket::RocketFreeFall(float userOrbit)
 		this_thread::sleep_for(chrono::milliseconds(100));
 		//Distance increases over time, the loop ends at the Orbit the user said.
 		float time = distance / currentVelocity;
-		cout << " SS Celestial is " << distance << " kilometers in air, moving at " << currentVelocity << " kilometers per second." << endl;
+		cout << " SS Celestial is " << distance << " kilometers in air, moving at " << round(currentVelocity) << " kilometers per second, with " << time <<" seconds having passed." << endl;
 		
 	}
 	cout << "The SS Celestial has landed. Great job, space ranger!";
-	
-}
-
-void GenerateRocketReport()
-{
-	cout << "This function will eventually have something in it.";
-}
-
-void Rocket::RocketLanding()
-{
-	cout << "3, 2, 1, landed!";
 }
 

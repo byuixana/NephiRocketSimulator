@@ -8,9 +8,8 @@ public:
 	float CalculateThrust();
 	float CalculateAcceleration();
 	void RocketInAir(float userOrbit);
-	void RocketLanding();
 	void RocketFreeFall(float userOrbit);
-	float UpdateMass();
+	void MassAfterPayload(float payload);
 	
 
 private:
