@@ -8,9 +8,7 @@ This program uses the formulas for thrust, acceleration, and velocity to calcula
 
 The purpose of writing this software was to predict the path of a rocket based on its weight, acceleration, and thrust in a simulation.
 
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://ooo.mmhmm.app/watch/z_qY48Q8P1Tyca1WekteHA)
 
 # Development Environment
 
@@ -22,8 +20,8 @@ I built this software in C++ and the namespace std.
 
 {Make a list of websites that you found helpful in this project}
 
-- [Web Site Name](http://url.link.goes.here)
-- [Web Site Name](http://url.link.goes.here)
+- [C++ User Forum](https://cplusplus.com/doc/tutorial/)
+- [ChatGPT](https://chat.openai.com/)
 
 # Future Work
 
